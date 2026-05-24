@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Machine — Журнал</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">
+            <img src="images/logoDM.png" alt="DM">
+            <span class="logo-bracket">[</span>&nbsp;DARK_MACHINE&nbsp;<span class="logo-bracket">]</span>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="participants.html" class="nav-link">Участники</a>
+            <a href="journal.html" class="nav-link active">Журнал</a>
+            <a href="resources.html" class="nav-link">Ресурсы</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">Ход разработки</div>
+            <h1 style="font-size:clamp(40px,6vw,76px);letter-spacing:-0.04em;margin-bottom:16px;">Журнал</h1>
+            <p style="font-size:18px;max-width:580px;">
+                Хроника разработки Dark Machine. Каждый лог — шаг вперёд. Каждый этап — новая системная директива выполнена.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 860px;">
+            <div class="timeline">
+
+                <!-- LOG 01 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #01 &nbsp;·&nbsp; ЭТАП: ИНИЦИАЛИЗАЦИЯ</div>
+                    <h2>Старт проекта и организация рабочей среды</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            Первый этап работы — организационный. Зарегистрирован Git-репозиторий проекта на GitHub,
+                            участники команды освоили базовые команды: клонирование, коммиты, создание веток, пуши.
+                            Определена и закреплена структура директорий.
+                        </p>
+                        <p>
+                            Параллельно проведён выбор игрового движка. После сравнения альтернатив команда остановилась
+                            на <strong style="color:var(--teal)">Godot 4</strong> — бесплатном движке с открытым исходным кодом,
+                            хорошо подходящем для 2D Pixel Art проектов. Первые документы оформлены в Markdown.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">Git Init</span>
+                            <span class="tag">Markdown</span>
+                            <span class="tag">Godot 4</span>
+                            <span class="tag">Структура репо</span>
+                        </div>
+                    </div>
+                    <div class="media-placeholder" style="margin-top: 16px;">
+                        <p style="margin:0;color:var(--muted);font-size:13px;">
+                            // Скриншот репозитория на GitHub с первыми коммитами &nbsp;
+                            <span style="color:var(--teal);">&lt;img src="images/repo-init.png"&gt;</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LOG 02 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #02 &nbsp;·&nbsp; ЭТАП: КОНЦЕПТ</div>
+                    <h2>Разработка концепции и игрового мира</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            На этом этапе сформирована центральная игровая концепция. Прописан Game Design Document:
+                            описание мира, главный герой, сеттинг, основные механики. Определена ключевая идея —
+                            система взаимоисключающих улучшений, разделяющая прохождение на «человеческий» и «механический» пути.
+                        </p>
+                        <p>
+                            Художники начали работу над концепт-артом: первые скетчи персонажа и окружения,
+                            разработка цветовой палитры. Описаны зоны завода и логика их взаимосвязи.
+                            Спроектирована базовая боевая система: удар, дэш, прыжок.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">GDD</span>
+                            <span class="tag">Концепт-арт</span>
+                            <span class="tag">Левел-дизайн</span>
+                            <span class="tag">Механики</span>
+                        </div>
+                    </div>
+                    <div class="media-placeholder" style="margin-top: 16px;">
+                        <p style="margin:0;color:var(--muted);font-size:13px;">
+                            // Концепт-арт персонажа или схема игрового мира &nbsp;
+                            <span style="color:var(--teal);">&lt;img src="images/concept-art.png"&gt;</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LOG 03 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #03 &nbsp;·&nbsp; ЭТАП: АНИМАЦИЯ И БОЙ</div>
+                    <h2>Динамика движения и боевая система</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            Этот этап был посвящён «ощущению» игры. Персонаж — это аватар игрока, и он должен чувствоваться живым.
+                            Завершена работа над ключевыми анимациями: прыжком и атакой.
+                        </p>
+                        <p>
+                            Каждый кадр выверен так, чтобы атака воспринималась резкой и опасной, а прыжок давал ощущение
+                            контроля над высотой. Все созданные анимации начали переноситься в движок Godot.
+                            Определены параметры: скорость движения, высота прыжка, дальность дэша, урон базовой атаки.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">Анимация</span>
+                            <span class="tag">Godot 4</span>
+                            <span class="tag">Баланс</span>
+                            <span class="tag">Боёвка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOG 04 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #04 &nbsp;·&nbsp; ЭТАП: ВИЗУАЛ</div>
+                    <h2>Архитектура индустриального ада: фоны и окружение</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            Завод Dark Machine огромен, и каждая его зона рассказывает собственную историю.
+                            Художественная команда подготовила концепты фонов для первых трёх игровых залов.
+                        </p>
+                        <p>
+                            Отказались от однообразных серых стен в пользу детализированного окружения: ржавые трубы,
+                            мерцающие датчики, бесконечные конвейеры на заднем плане. После утверждения концептов
+                            художники приступили к финальной отрисовке задников. Мир игры обрёл глубину и атмосферу.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">Pixel Art</span>
+                            <span class="tag">Фоны</span>
+                            <span class="tag">Атмосфера</span>
+                        </div>
+                    </div>
+                    <div class="media-placeholder" style="margin-top: 16px;">
+                        <p style="margin:0;color:var(--muted);font-size:13px;">
+                            // Скриншот или рендер игрового уровня / фона &nbsp;
+                            <span style="color:var(--teal);">&lt;img src="images/level-bg.png"&gt;</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LOG 05 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #05 &nbsp;·&nbsp; ЭТАП: БОСС</div>
+                    <h2>Протокол «Первый Босс»: проектирование угрозы</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            Ни одна метроидвания не обходится без серьёзного испытания. Команда провела мозговой штурм
+                            и приступила к проектированию первого босса Dark Machine.
+                        </p>
+                        <p>
+                            Нарративный и геймдизайнерский блоки прорабатывали не только внешний облик, но и логику поведения.
+                            Первый босс — не просто сильный враг, а элемент экосистемы завода: машина, чья цель —
+                            устранить биологический сбой. Определены фазы боя, уникальные атаки и механика подталкивания
+                            игрока к первым механическим улучшениям.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">Босс-дизайн</span>
+                            <span class="tag">ИИ поведение</span>
+                            <span class="tag">Нарратив</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOG 06 -->
+                <div class="tl-entry">
+                    <div class="tl-dot"></div>
+                    <div class="tl-tag">ЛОГ #06 &nbsp;·&nbsp; ЭТАП: ДОКУМЕНТАЦИЯ</div>
+                    <h2>Финализация документации и сайт практики</h2>
+                    <div class="card" style="margin-top: 14px;">
+                        <p>
+                            Финальный этап первой части практики — приведение в порядок всей проектной документации.
+                            Обновлены README-файлы, журнал прогресса, описание участников и список ресурсов.
+                        </p>
+                        <p>
+                            Создан статический сайт проекта на HTML и CSS — данный сайт. Подготовлен и отформатирован
+                            итоговый отчёт по практике в форматах DOCX и PDF. Материалы загружены в репозиторий
+                            и систему дистанционного обучения.
+                        </p>
+                        <div class="tag-row" style="margin-top: 14px;">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Отчёт</span>
+                            <span class="tag">Markdown</span>
+                            <span class="tag">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>DARK_MACHINE &nbsp;·&nbsp; Проектная практика 2025</p>
+        <p>Лохмаев А.С. &nbsp;·&nbsp; Группа 251-336</p>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
